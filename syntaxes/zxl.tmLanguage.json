@@ -1,0 +1,82 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "zxl language",
+    "patterns": [
+        {
+            "include": "#comment"
+        },
+        {
+            "include": "#stringSingle"
+        },
+        {
+            "include": "#stringDouble"
+        },
+        {
+            "include": "#counterMark"
+           
+        },
+        {
+             "include": "#label"
+        }
+    ],
+    "repository": {
+        "comment": {
+            "name": "comment.quoted.double.zxl",
+            "begin": "<!--",
+            "end": "-->",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.zxl",
+                    "match": "\\\\."
+                }
+            ]
+        },
+        "stringSingle": {
+            "name": "string.quoted.double.zxl",
+            "begin": "'",
+            "end": "'",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.zxl",
+                    "match": "\\\\."
+                }
+            ]
+        },
+        "stringDouble": {
+            "name": "string.quoted.double.zxl",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.zxl",
+                    "match": "\\\\."
+                }
+            ]
+        },
+        "counterMark":{
+            "name": "entity.name.tag.block.any.zxl",
+            "begin": "<",
+            "end": " ",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.zxl",
+                    "match": "\\\\."
+                }
+            ]
+        },
+        "label":{
+            "patterns":[
+                {
+                    "name":"entity.other.attribute-name.zxl",
+                    "match":"[^(\\s]+(?=\\s*=)"
+                },
+                {
+                    "name":"entity.name.tag.zxl",
+                    "match":"input|div|span|p"
+                }
+            ]
+        }
+
+    },
+    "scopeName": "source.zxl"
+}

@@ -1,0 +1,10 @@
+{
+    "输入框input": {
+        "prefix": "input",
+        "body": [
+            "<!-- 分别表示：类型和值 -->",
+            "<input type='${1:string}' value='${2:any}'/>"
+        ],
+        "description": "输入框"
+    }
+}

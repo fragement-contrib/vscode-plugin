@@ -1,0 +1,53 @@
+{
+  "name": "vscode-plugin",
+  "version": "0.0.0",
+  "description": "VSCode 插件开发",
+  "engines": {
+    "vscode": "^1.27.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "icon": "images/zxl20070701.jpg",
+  "main": "./src/extension.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fragement-contrib/vscode-plugin.git"
+  },
+  "keywords": [
+    "vscode",
+    "plugin"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "zxl",
+        "extensions": [
+          ".zxl"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "zxl",
+        "scopeName": "source.zxl",
+        "path": "./syntaxes/zxl.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "zxl",
+        "path": "./snippets/zxl.json"
+      }
+    ]
+  },
+  "author": "zxl20070701",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fragement-contrib/vscode-plugin/issues"
+  }
+}
